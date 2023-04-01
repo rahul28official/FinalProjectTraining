@@ -7,7 +7,7 @@ import { Component , Input , OnInit  } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  @Input() view: 'grid' | 'list'='list';
+  @Input() view: 'grid' | 'list' | 'currcartitem' | 'prevcartitem' = 'grid';
   
   constructor(){}
   ngOnInit(): void{}
