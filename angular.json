@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FinalProject": {
+    "ECommerceUI": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/final-project",
+            "outputPath": "dist/ecommerce-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FinalProject:build:production"
+              "browserTarget": "ECommerceUI:build:production"
             },
             "development": {
-              "browserTarget": "FinalProject:build:development"
+              "browserTarget": "ECommerceUI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FinalProject:build"
+            "browserTarget": "ECommerceUI:build"
           }
         },
         "test": {
@@ -96,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "0aa7ba53-5dd6-4e05-bf25-ccaf121fbfeb"
+    "analytics": "96724e53-e353-489c-a814-922261f0f91b"
   }
 }
