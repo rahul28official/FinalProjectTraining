@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient , HttpParams } from '@angular/common/http';
-import { Category } from '../models/models';
+import { Category, User } from '../models/models';
 import { map } from 'rxjs';
 
 @Injectable({
@@ -34,5 +34,25 @@ export class NavigationService {
       .set('subcategory',subCategory)
       .set('count',count),
     });
+
   }
+  getProduct(id: number) {
+    let url = this.baseurl + 'GetProduct/' + id;
+    return this.http.get(url);
+  }
+
+  registerUser(user: User) {
+    let url = this.baseurl + 'RegisterUser';
+    return this.http.post(url, user, { responseType: 'text' });
+  }
+
+  loginUser(email: string, password: string) {
+    let url = this.baseurl + 'LoginUser';
+    return this.http.post(
+      url,
+      { Email: email, Password: password },
+      { responseType: 'text' }
+    );
+  }
+
 }
